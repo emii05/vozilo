@@ -3,7 +3,7 @@ import org.etsntesla.it.vozila.Vozilo;
 import org.junit.jupiter.api.*;
 
 
-
+@Disabled
 public class VoziloTest2 {
 
 
