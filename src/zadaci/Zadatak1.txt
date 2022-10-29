@@ -1,0 +1,8 @@
+Koristeći Dependency Injection šablon, izmeni kod projekta tako da:
+  1) Se kreiraju bean-ovi
+         a) "akumulator1" klase Akumulator
+         b) "alternator1" klase Altenator i snage 5.0d
+         c) "motor1" klase Motor snage 50.0d i sa delovima "akumulator1" i "altenator1"
+         d) "vozilo1" klase Vozilo sa motorom "motor1"
+
+  2) Koristeći test klasu VoziloTest testiraj instancu vozila kotisteće bean "vozilo1"
