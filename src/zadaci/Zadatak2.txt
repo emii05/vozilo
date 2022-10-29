@@ -1,7 +1,18 @@
 Koristeći Dependency Injection šablon, izmeni kod projekta tako da:
 
- 1) Se kreiraju bean-ovi
+ 1) Kreiraju bean-ovi
         a) "akumulator1" klase Akumulator
         b) "alternator1" klase Altenator i snage 5.0d
         c) "motor1" klase Motor snage 50.0d i sa delovima "akumulator1" i "altenator1"
-        d) "vozilo1" klase Vozilo sa motorom "motor1"
+        d) "motor2" klase Motor snage 50.0d i sa delovima "akumulator1" i "altenator1"
+        e) "vozilo1" klase Vozilo sa motorom "motor1"
+        f) "vozilo2" klase Vozilo sa motorom "motor2"
+
+ 2) Testirati kod koristeći VoziloTest2 klase, tako da oba vozila imaju jedinstevene delove.
+
+ 3) Izmeniti kod tako da se bean "akumulator1" kreira putem staičke bean-methode
+
+ 4) Izmeniti kod tako se bean "motor1" kreira preko bean-factory "beanfactory"
+
+ 5) Testirati kod koristeći VoziloTest3 klase, tako da se kreiraja izlog od četri vozila
+    pri tome su dva tipa od bean-a "vozilo1" a druga dva tipa "vozilo2".

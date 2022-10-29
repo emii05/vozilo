@@ -1,0 +1,15 @@
+Koristeći Dependency Injection šablon, izmeni kod projekta tako da:
+  1) Se kreiraju bean-ovi
+         a) "akumulator1" klase Akumulator
+         b) klase Altenator i snage 5.0d korsiteci bean-factory i bean-method-u "altenator5"
+         c) "motor1" klase Motor snage 50.0d i sa delovima bean "akumulator1" i altenatorom kao produkt bean-factory
+         d) "vozilo1" klase Vozilo sa bean motorom "motor1"
+
+ 2) Izemni beanove iz tačke 1) primenom autowiring tipa:
+        a) byType za bean "motor1"
+        b) byName za bean "vozilo1"
+
+ 3) Testirati vozilo bean-a "vozilo1" u klasi VoziloTest
+
+ 4) Koristeći DI notacije ukolniti sve bean-ove iz resursnog fajl-a, pri čemu se test VoziloTest
+    ne menja u odnosu na takčku 3)
