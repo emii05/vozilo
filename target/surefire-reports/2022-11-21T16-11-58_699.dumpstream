@@ -1,0 +1,5 @@
+# Created at 2022-11-21T16:11:59.361
+Boot Manifest-JAR contains absolute paths in classpath 'E:\4-2(2022-2023)\Aleksa Tanusevic\Vozila\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
