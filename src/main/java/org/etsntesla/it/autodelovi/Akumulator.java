@@ -1,11 +1,13 @@
 package org.etsntesla.it.autodelovi;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Akumulator {
 
     private final static String[] NIVO_POPUNJENOSTI= {"PRAZAN","SKOROPRAZAN","POLUPRAZAN","SKOROPUN","PUN"};
 
-    public Akumulator(){}
+    private Akumulator(){}
 
     private int stanje = 4;
 
@@ -24,5 +26,9 @@ public class Akumulator {
     @Override
     public String toString() {
         return "Stanje: "+getStanje()+"\n"+NIVO_POPUNJENOSTI.toString();
+    }
+
+    public static Akumulator akumulatorBeanFactory(){
+        return new Akumulator();
     }
 }

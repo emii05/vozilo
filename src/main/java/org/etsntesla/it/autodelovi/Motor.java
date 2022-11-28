@@ -1,17 +1,25 @@
 package org.etsntesla.it.autodelovi;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Motor {
 
     protected boolean upaljen;
     protected boolean ispravnost;
     protected double snaga;
+    @Autowired
+    @Qualifier("alternator5")
     protected Alternator alternator;
+    @Autowired
     protected Akumulator  akumulator;
 
     {
         upaljen=false;
         ispravnost=true;
-        akumulator =new Akumulator();
+
     }
 
     public Motor(double snaga) {
@@ -22,6 +30,8 @@ public class Motor {
 
         this.alternator = new Alternator(this.snaga/10);
     }
+
+    public Motor(){}
 
     public boolean isUpaljen() {
         return upaljen;
@@ -71,9 +81,20 @@ public class Motor {
     }
 
     public boolean zameniAkumulator(){
-        if(!upaljen) akumulator = new Akumulator();
+        if(!upaljen) akumulator = null;
         return !upaljen;
     }
 
+    public void setAlternator(Alternator alternator) {
+        this.alternator = alternator;
+    }
+
+    public void setAkumulator(Akumulator akumulator) {
+        this.akumulator = akumulator;
+    }
+
+    public void setSnaga(double snaga) {
+        this.snaga = snaga;
+    }
 }
 

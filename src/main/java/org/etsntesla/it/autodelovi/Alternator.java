@@ -2,11 +2,13 @@ package org.etsntesla.it.autodelovi;
 
 public class Alternator {
 
-    protected final double snaga;
+    protected double snaga;
 
     public Alternator(double snaga) {
         this.snaga = snaga;
     }
+
+    public Alternator(){}
 
     public double isporucenaElEnergija(double time){
         return snaga*time;
@@ -17,5 +19,9 @@ public class Alternator {
         return "Alternator{" +
                 "snaga=" + snaga +
                 '}';
+    }
+
+    public void setSnaga(double snaga) {
+        this.snaga = snaga;
     }
 }

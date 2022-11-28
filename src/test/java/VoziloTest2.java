@@ -1,7 +1,8 @@
 import org.etsntesla.it.dodaci.Putnik;
 import org.etsntesla.it.vozila.Vozilo;
 import org.junit.jupiter.api.*;
-
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @Disabled
 public class VoziloTest2 {
@@ -11,7 +12,7 @@ public class VoziloTest2 {
 
     static int testIndex = 0;
 
-    //static ApplicationContext ctx;
+    static ApplicationContext ctx;
 
     //snaga=50, sed=4, snagaAlter=5
     static Vozilo auto1;
@@ -22,11 +23,11 @@ public class VoziloTest2 {
     @BeforeAll
     static void init(){
 
-        //ctx = new ClassPathXmlApplicationContext("beans.xml");
+        ctx = new ClassPathXmlApplicationContext("beans.xml");
 
         //auto = new Vozilo(50.0d,4);
-        //auto1 = (Vozilo) ctx.getBean("vozilo1");
-        //auto2 = (Vozilo) ctx.getBean("vozilo2");
+        auto1 = (Vozilo) ctx.getBean("vozilo1");
+        auto2 = (Vozilo) ctx.getBean("vozilo2");
         //instance putnik1, putnik2 su instance anonimnih klasa koje implementriaju interfejs Putnik
         putnik1 = new Putnik() {
             @Override

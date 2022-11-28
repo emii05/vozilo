@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- services -->
+
+<!--    <bean id="voziloX"-->
+<!--          factory-bean="factoryBean"-->
+<!--          factory-method="voziloXBeanFactory"-->
+<!--            scope="prototype"/>-->
+
+<!--    <bean id="vozilo1" class="org.etsntesla.it.vozila.Vozilo" scope="prototype">-->
+
+<!--&lt;!&ndash;        <property name="motor2" ref="motor1"/>&ndash;&gt;-->
+
+<!--    </bean>-->
+
+<!--    <bean id="vozilo2" class="org.etsntesla.it.vozila.Vozilo" scope="prototype" autowire="byName">-->
+
+<!--&lt;!&ndash;        <property name="motor" ref="motor2"/>&ndash;&gt;-->
+
+<!--    </bean>-->
+
+<!--    <bean id="motor1" factory-bean="factoryBean" factory-method="motorBeanFactory"/>-->
+
+<!--    <bean id="motor1" class="org.etsntesla.it.autodelovi.Motor">-->
+
+<!--        <property name="alternator" ref="alternator1"/>-->
+<!--        <property name="akumulator" ref="akumulator1"/>-->
+<!--        <property name="snaga"  value="50"/>-->
+
+<!--    </bean>-->
+
+<!--    <bean id="motor2" class="org.etsntesla.it.autodelovi.Motor" autowire="byType">-->
+
+<!--&lt;!&ndash;        <property name="alternator" ref="alternator1"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="akumulator" ref="akumulator1"/>&ndash;&gt;-->
+<!--        <property name="snaga"  value="100"/>-->
+
+<!--    </bean>-->
+
+<!--    <bean id="alternator1" class="org.etsntesla.it.autodelovi.Alternator">-->
+
+<!--        <property name="snaga" value="5"/>-->
+
+<!--    </bean>-->
+
+<!--    <bean class="org.etsntesla.it.autodelovi.Akumulator"/>-->
+
+<!--    <bean id="factoryBean" class="org.etsntesla.it.BeanFactory"/>-->
+    <!-- more bean definitions for services go here -->
+    
+    <context:component-scan base-package="org.etsntesla.it"/>
+
+</beans>

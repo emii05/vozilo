@@ -3,15 +3,19 @@ package org.etsntesla.it.vozila;
 import org.etsntesla.it.autodelovi.Motor;
 import org.etsntesla.it.dodaci.AutoMehanicar;
 import org.etsntesla.it.dodaci.Putnik;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
-
-
-
+@Component("vozilo1")
 public class Vozilo {
 
     private static int nextSerialID=1000;
 
     protected int serialID;
+
+    @Autowired
+    @Qualifier("motorBeanFactory")
     protected Motor motor;
     protected double kilometraza;
     public Putnik[] putnici;
@@ -23,7 +27,13 @@ public class Vozilo {
         putnici =new Putnik[brojSedista];
     }
 
+    public Vozilo(){
+        serialID = nextSerialID++;
+        kilometraza=0.00;
+        putnici = new Putnik[4];
 
+
+    }
 
     public void start(){
         if(putnici[0]!=null && putnici[0].startovanjeVozila()){
@@ -67,5 +77,9 @@ public class Vozilo {
                 "serialID=" + serialID +
                 ", kilometraza=" + kilometraza +
                 '}';
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
     }
 }
